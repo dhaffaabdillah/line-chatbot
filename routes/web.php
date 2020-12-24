@@ -28,7 +28,8 @@ heroku pg:psql postgresql-elliptical-42711 --app tebaktokoh-line
 channel secret 
 871213f0a9287c18e23f0083643f7fca
 
-channel access token BBLoJ4GlIaz673g6/I7HdlWtpeTWziW5/DsojTUWOorBHmvdTRtJoGoA+9kaEkmLCmIzZaj5UmX1qqJUdyRAi/01ZCLRP1ZAAJtSaOQZfufYTuR5vZ0oNa2TH3ezDnPGBy7MbA7dHv6kJpC8Mx0MyQdB04t89/1O/w1cDnyilFU=
+channel access token 
+BBLoJ4GlIaz673g6/I7HdlWtpeTWziW5/DsojTUWOorBHmvdTRtJoGoA+9kaEkmLCmIzZaj5UmX1qqJUdyRAi/01ZCLRP1ZAAJtSaOQZfufYTuR5vZ0oNa2TH3ezDnPGBy7MbA7dHv6kJpC8Mx0MyQdB04t89/1O/w1cDnyilFU=
 */
 
 
@@ -42,4 +43,4 @@ $router->get('/key', function(){
     return \Illuminate\Support\Str::random(32);
 });
 
-$router->post('/webhook','Webhook');
+$router->post('/webhook', 'Webhook');
