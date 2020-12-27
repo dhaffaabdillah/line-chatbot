@@ -249,7 +249,7 @@ class Webhook extends Controller
 
             // create play again message
             $message = ($this->user['score'] < 8) ?
-                'Apakah antum menyerah? Ketik "MULAI" untuk bermain lagi!':
+                'Apakah antum menyerah? Ketik "MULAI" untuk bermain lagi':
                 'GGWP! Ketik "MULAI" untuk bermain lagi!';
             $textMessageBuilder2 = new TextMessageBuilder($message);
 
