@@ -135,7 +135,7 @@ class Webhook extends Controller
 
             // create welcome message
             $message  = "Hai, " . $profile['displayName'] . "!\n";
-            $message .= "Silakan kirim pesan \"MULAI\" untuk memulai kuis Tebak Karakter Attack on Titan.";
+            $message .= "Test pengetahuan anime Shingeki no Kyojin dengan mengirim pesan \"MULAI\" ";
             $textMessageBuilder = new TextMessageBuilder($message);
 
             // create sticker message
@@ -189,7 +189,7 @@ class Webhook extends Controller
         $stickerMessageBuilder = new StickerMessageBuilder(1, 106);
 
         // create text message
-        $message = 'Silahkan kirim pesan "MULAI" untuk memulai kuis.';
+        $message = 'Kirim pesan MULAI untuk memulai test pengetahuan di Shingeki no Kyojin.';
         $textMessageBuilder = new TextMessageBuilder($message);
 
         // merge all message
@@ -240,7 +240,7 @@ class Webhook extends Controller
         }
         else {
             // create user score message
-            $message = 'Skormu '. $this->user['score'];
+            $message = 'Skor '. $profile['displayName']. $this->user['score'];
             $textMessageBuilder1 = new TextMessageBuilder($message);
 
             // create sticker message
