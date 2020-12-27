@@ -134,8 +134,8 @@ class Webhook extends Controller
             $profile = $res->getJSONDecodedBody();
 
             // create welcome message
-            $message  = "Salam kenal, " . $profile['displayName'] . "!\n";
-            $message .= "Silakan kirim pesan \"MULAI\" untuk memulai kuis Tebak Kode.";
+            $message  = "Hai, " . $profile['displayName'] . "!\n";
+            $message .= "Silakan kirim pesan \"MULAI\" untuk memulai kuis Tebak Karakter Attack on Titan.";
             $textMessageBuilder = new TextMessageBuilder($message);
 
             // create sticker message
@@ -189,7 +189,7 @@ class Webhook extends Controller
         $stickerMessageBuilder = new StickerMessageBuilder(1, 106);
 
         // create text message
-        $message = 'Silakan kirim pesan "MULAI" untuk memulai kuis.';
+        $message = 'Silahkan kirim pesan "MULAI" untuk memulai kuis.';
         $textMessageBuilder = new TextMessageBuilder($message);
 
         // merge all message
@@ -249,8 +249,8 @@ class Webhook extends Controller
 
             // create play again message
             $message = ($this->user['score'] < 8) ?
-                'Wkwkwk! Nyerah? Ketik "MULAI" untuk bermain lagi!':
-                'Great! Mantap bro! Ketik "MULAI" untuk bermain lagi!';
+                'Apakah antum menyerah? Ketik "MULAI" untuk bermain lagi!':
+                'GGWP! Ketik "MULAI" untuk bermain lagi!';
             $textMessageBuilder2 = new TextMessageBuilder($message);
 
             // merge all message
